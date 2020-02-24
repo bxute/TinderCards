@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Developer email: hiankit.work@gmail.com
+  ~ GitHub: https://github.com/bxute
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/leftEdgePeekingCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:cardBackgroundColor="#ffffff"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/centerCard"
+        app:layout_constraintRight_toLeftOf="@+id/centerCard"
+        app:layout_constraintTop_toTopOf="@+id/centerCard" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/centerCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:visibility="visible"
+        app:cardCornerRadius="14dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardElevation="2dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintDimensionRatio="3:4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rightEdgePeekingCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintBottom_toBottomOf="@id/centerCard"
+        app:layout_constraintLeft_toRightOf="@+id/centerCard"
+        app:layout_constraintTop_toTopOf="@+id/centerCard">
+
+        <View
+            android:id="@+id/darkOverlayOnRightPeekingCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#800000"
+            android:visibility="gone" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
